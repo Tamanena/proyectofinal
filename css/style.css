@@ -1,0 +1,455 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+body {
+    background: #dbdbdb;
+    font-family: 'Montserrat', sans-serif;
+    padding: 90px 0;
+
+    
+}
+
+#wraper {
+    display: grid; 
+    grid-template-areas: 
+    "miheader miheader miheader" 
+    "aside intro intro"
+    "aside novedades novedades"
+    "aside liquidacion liquidacion"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto auto auto; 
+    column-gap: 25px; 
+    row-gap: 20px;
+    width: 100%;
+    height: 100vh;
+        
+    }      
+        
+#miheader {
+
+   grid-area: header;
+    background-color: #4e5c3b;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+     
+ } 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.navmenu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.navmenu_item { 
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    max-width: max-content;
+}
+.navmenu_link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 3px;}
+
+.navmenu_link:hover {
+  background-color: #343d23;
+  transition: 1s;} 
+    
+  ul ul li {
+  
+    list-style-type: none;
+    background-color: #4e5c3b;
+    padding: 10px;
+       }
+  ul ul a {
+    text-decoration: none;
+    color: white;
+  } 
+
+ul ul li :hover{
+  background-color: #343d23;
+  transition: 1sg;
+}
+nav li  ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+ 
+  }  
+ nav li:hover > ul {
+  display: block;
+ }    
+
+ h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 100px;
+     
+} 
+
+#miaside { 
+    grid-area: aside;
+    background-color: #4e5c3b;
+    display: inline-block;
+    margin-top: 8rem;
+    
+  }
+  #miaside ul  {
+    list-style-type: none;
+    padding: 10px;
+  }
+  #miaside ul li {
+    border: white solid 1px;
+    padding: 5px;}
+  
+  #mimain {
+    display: flex;
+    flex-direction: column;
+    
+  }  
+    div#intro { 
+      grid-area: intro;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+      
+      
+      
+  }
+
+  #intro img {
+     padding-top: 120px;
+     
+
+  }
+
+  img {
+    
+
+  }
+  h2 {
+    color: #01050a;
+    text-align: center;
+    font-weight: bold;
+    padding: 5rem;
+}
+      
+  div #novedades {
+      grid-area: novedades;
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: wrap;
+      padding: 15px;
+      
+   
+  }
+  div #novedades picture img{
+      width: 500px;
+      height: 350px;
+      margin: 15p;
+      padding: 15px;
+      
+  }
+  div #novedades img{
+      width: 100%;
+      height: auto;
+  }
+  div #novedades #destacados{
+    display: flex;
+    align-items: flex-start;
+    
+       
+  }
+  div #liquidacion {
+      grid-area: liquidacion;
+      padding: 15px;
+      
+      }
+  
+  div #liquidacion #ofertas picture{
+      width: 500px;
+      height: 350px;
+  }
+  div #liquidacion #ofertas picture img{
+      width: 100%;
+      height: 100%;
+      margin: 15px;
+      padding: 15px;
+  }
+  div #liquidacion #ofertas {
+   display: flex;
+   align-items: flex-start;
+   flex-wrap: wrap;
+  }
+#mifooter {
+    grid-area: footer;
+    background-color: #4e5c3b;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left:  0;
+       
+  }
+  
+  #mifooter li {
+    list-style-type: none;
+    align-items: center;
+    padding: 5px;
+
+  }
+  #mifooter a {
+  color: white;
+  text-decoration: none;
+  
+   }
+
+   .btn_wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 3);
+    z-index: 100;
+  } 
+  .btn_wsp:hover {
+    text-decoration: none;
+    color: green;
+    background-color: white;
+  }  
+
+  .navtoggle {
+    color:white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px ;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+   
+  body {
+      
+      
+  }
+  
+  #wraper {
+      display: grid; 
+      grid-template-areas: 
+      "miheader miheader" 
+      "aside intro "
+      "aside novedades"
+      "aside  liquidacion"
+      "footer footer";
+      grid-template-columns: 1fr 1fr ; 
+      grid-template-rows: auto auto auto auto auto; 
+                
+      }      
+          
+  #miheader {
+  
+     height: 80px;
+       
+   } 
+  
+   .navmenu {
+     flex-direction: column;
+     margin-right: 20px;
+     background-color: #4e5c39;
+     position: fixed;
+     left: 0;
+     top: 60px;
+     width: 100%;
+     align-items: center;
+     padding: 20px 0;
+    height: calc( 100%-60px);
+    overflow-y: auto;
+
+     
+    margin-left: 100%;
+     
+    }
+  
+    
+  
+  .navtoggle {
+    
+    display: block;
+    }
+
+  .navmenu_visible {
+    margin-left: 0;
+
+  }  
+  
+  h1 {
+      font-size:20px;
+      margin: 0;
+      padding: 0
+        
+  } 
+  
+  #miaside { 
+    
+  margin:0;
+  width: 180px;
+  }
+  
+  #miaside .navmenu_link {
+    font-size: 16px;
+  }
+        
+  #intro img{ 
+    
+        
+        
+    }
+  
+    
+  
+    h2 {
+      font-size: 16px;
+      text-align: left;
+      padding: 1rem;
+  }
+        
+    div #novedades {
+        grid-area: novedades;
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        padding: 15px;
+        
+     
+    }
+    div #novedades picture img{
+        width: 500px;
+        height: 350px;
+        margin: 15p;
+        padding: 15px;
+        
+    }
+    div #novedades img{
+        width: 100%;
+        height: auto;
+    }
+    div #novedades #destacados{
+      display: flex;
+      align-items: flex-start;
+      
+         
+    }
+    div #liquidacion {
+        grid-area: liquidacion;
+        padding: 15px;
+        
+        }
+    
+    div #liquidacion #ofertas picture{
+        width: 500px;
+        height: 350px;
+    }
+    div #liquidacion #ofertas picture img{
+        width: 100%;
+        height: 100%;
+        margin: 15px;
+        padding: 15px;
+    }
+    div #liquidacion #ofertas {
+     display: flex;
+     align-items: flex-start;
+     flex-wrap: wrap;
+    }
+  #mifooter {
+      
+      width: 768px;
+      
+      
+      
+         
+    }
+    
+    
+  
+    
+        
+    @media screen and (max-width: 480px)  {
+ 
+      
+      #wraper {
+        display: grid; 
+        grid-template-areas: 
+        "miheader" 
+        "intro"
+        "novedades"
+        "liquidacion"
+        "footer";
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto auto auto auto; 
+        row-gap: 20px;
+                    
+        }   
+        
+#miaside {
+  visibility: hidden;
+}        
+
+#mifooter {
+   width: 480px;
+}
+
+#intro {
+  width: 100%;
+  margin-top: 0;
+
+}
+
+    }
+     
+  
+  }
